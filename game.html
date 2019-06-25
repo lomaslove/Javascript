@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>game</title>
+
+  </head>
+  <body>
+    <input type="button" onClick="start()" value="Start Game">
+
+    <script>
+      var secretword = "lomaslove";
+      var output = document.getElementById("output");
+
+      function start(){
+        getsecret(prompt("what is the word?"));
+      }
+      function getsecret(secret){
+        if(secret==secretword){
+          output.innerHTML="you are correct";
+        }else{
+          getsecret(prompt("guess again?"));
+        }
+      }
+
+
+
+      </script>
+      </body>
+      </html>

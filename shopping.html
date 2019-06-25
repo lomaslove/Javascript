@@ -1,0 +1,41 @@
+<DOCTYPE html>
+  <html>
+  <head>
+<title>
+    shopping list </title>
+
+    </head>
+
+    <body>
+      <input type="text" id="item">
+      <br>
+      <input type="button" onClick="additem()" value="Add Item">
+      <br>
+      <div id="output"></div>
+
+      <script>
+
+      var shoppinglist=[];
+
+      function additem(){
+        var additem = document.getElementById("item").value;
+        shoppinglist.push(additem);
+        outputlist();
+      }
+
+      function outputlist(){
+        var html="";
+        var output=document.getElementById("output");
+        for(x=0; x<shoppinglist.length; x++){
+          html+=(x+1)+"."+shoppinglist[x]+"<br>";
+        }
+        output.innerHTML= html;
+
+      }
+
+
+        </script>
+
+
+        </body>
+        </html>
